@@ -6,14 +6,17 @@ MATLAB (code written using version R2018b - academic licence)
 SuperSegger (Wiggins Lab, Washington).
 
 ############ Input ############ 
+
 Phase contrast images of cells to be segmented are placed in the 'Input' folder. Multiple files can be uploaded, the desired file to be segmented can be selected in Segmentation_main.m.
 (input directory can be changed in ./Functions/Configure.m)
 
 ############ Settings ############
+
 Settings can be adjusted in ./Functions/Configure.m
 Variables are explained there
 
 ############ Process ############
+
 The entire process is run from Segmentation_main.m. Only change the file_name to the name of the file to be segmented and optionally change the settings. The main file calls the following funtions: 
 
 - Preprocessor.m prepares the input images for SuperSegger segmentation by homogenizing the background illumination and applying a bilatteral filter. Output   images are then stored temporarily in 'Output' folder.
@@ -27,6 +30,7 @@ The entire process is run from Segmentation_main.m. Only change the file_name to
 - DisplaySegmentation.m finally displays the output segmentation.
 
 ############ Output ############
+
 Output is stored in a new folder called 'MyFileName_Segmention'
 
 This code was written by Wouter Wesselink working at Nynke Dekker Lab, TU Delft. 

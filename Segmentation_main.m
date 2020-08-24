@@ -7,7 +7,7 @@ file_name = 'PC1';
 
 %% Set configuration variables
 addpath(genpath(pwd))
-addpath('./Functions')
+addpath('./Functions_MATLAB')
 
 configVar = Configure();
 cd(configVar.rootPath) 

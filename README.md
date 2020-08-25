@@ -1,5 +1,5 @@
 # Live Cell Imaging Analysis Pipeline
-This repository contains two out of two out of five steps for the Live Cell Imaging analysis. Other steps are perfomed in Fiji or NIS Elements viewer or are not yet developed. The pipeline takes in phase contrast and fluorescence images in .nd2  and outputs step fitted intensity traces for individual foci. 
+This repository contains two out of five steps for the Live Cell Imaging analysis. Other steps are perfomed in Fiji or NIS Elements viewer or are not yet developed. The pipeline takes in phase contrast and fluorescence images in .nd2  and outputs step fitted intensity traces for individual foci. 
 
 This pipeline contains code written by Filip Asscher, Edo van Veen and  Wouter Wesselink int the Nynke Dekker Lab, TU Delft. 
 ##
@@ -44,13 +44,13 @@ The entire process is run from Segmentation_main.m. Only change the file_name to
 
 - LoadOutput.m retrieves and converts the SuperSegger output to extract cell outlines and labels.
 
-- PostProcessor.m performs an extra selection to the SuperSegger output by filtering out cells whose properties of area and length-width ratio do not   correspond to those set in ./Functions/Configure.m.
+- PostProcessor.m performs an extra selection to the SuperSegger output by filtering out cells whose properties of area and length-width ratio do not correspond to those set in ./Functions/Configure.m.
 
 - DisplaySegmentation.m finally displays the output segmentation.
 
 ***Output*** 
 
-Output is stored in a new folder called 'MyFileName_Segmention'
+Output is stored in a new folder called 'MyFileName_Segmentation'
 
 ## 2. Step Fitting
 This programme uses the step fitting and xml table parsing code written by Edo van Veen.  
@@ -63,13 +63,13 @@ Folder in which TrackMate's output .xml files are stored.
   
 ***Settings:***  
 Enter fitting and optics parameters in Begin-End-Edit box below. Also enter the trace number you want to analyse.  
-The trace with number 1 has the most data point, number 2 has fewer and so on.  
+The trace with number 1 has the most data points, number 2 has fewer and so on.  
   
 ***Process:***  
 The entire process is run from Step_fitting_main.py. Only change the variables listed above and possibly the root directory.  
 After setting the variables, click run. The first time you run the code on a new dataset it takes quite long (~5 min) since  
 the TrackMate output needs to be parsed to a new dataframe. From the second time onwards, this dataframe is recycled and it  
-should be faster. The output figures are shown in teh 'Plots' window.  
+should be faster. The output figures are shown in the 'Plots' window.  
   
 ***Output:***  
 Output is given as three figures:  
